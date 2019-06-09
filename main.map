@@ -1,0 +1,53 @@
+Modules list:
+-------------
+main.o:
+    CODE              Offs=000000  Size=000000  Align=00001  Fill=0000
+    RODATA            Offs=000000  Size=000000  Align=00001  Fill=0000
+    BSS               Offs=000000  Size=000000  Align=00001  Fill=0000
+    DATA              Offs=000000  Size=000000  Align=00001  Fill=0000
+    ZEROPAGE          Offs=000000  Size=00003E  Align=00001  Fill=0000
+    NULL              Offs=000000  Size=000000  Align=00001  Fill=0000
+    HEADER            Offs=000000  Size=00000A  Align=00001  Fill=0000
+    RAM               Offs=000000  Size=000029  Align=00001  Fill=0000
+    BANKF             Offs=000000  Size=000D13  Align=00001  Fill=0000
+    BANKE             Offs=000000  Size=003830  Align=00001  Fill=0000
+    BANKD             Offs=000000  Size=000D01  Align=00001  Fill=0000
+    VECTORS           Offs=000000  Size=000006  Align=00001  Fill=0000
+
+
+Segment list:
+-------------
+Name                   Start     End    Size  Align
+----------------------------------------------------
+BSS                   000000  000000  000000  00001
+CODE                  000000  000000  000000  00001
+DATA                  000000  000000  000000  00001
+HEADER                000000  000009  00000A  00001
+NULL                  000000  000000  000000  00001
+RODATA                000000  000000  000000  00001
+ZEROPAGE              000000  00003D  00003E  00001
+RAM                   000300  000328  000029  00001
+BANKD                 008000  008D00  000D01  00001
+BANKE                 008000  00B82F  003830  00001
+BANKF                 00C000  00CD12  000D13  00001
+VECTORS               00FFFA  00FFFF  000006  00001
+
+
+Exports list by name:
+---------------------
+__RAM_LOAD__              000300  LA    __RAM_RUN__               000300  LA    
+__RAM_SIZE__              000029  EA    
+
+
+Exports list by value:
+----------------------
+__RAM_SIZE__              000029  EA    __RAM_RUN__               000300  LA    
+__RAM_LOAD__              000300  LA    
+
+
+Imports list:
+-------------
+__RAM_LOAD__ ([linker generated]):
+__RAM_RUN__ ([linker generated]):
+__RAM_SIZE__ ([linker generated]):
+
